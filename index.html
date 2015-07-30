@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />       
+<script>
+
+function callFunction() {
+	alert("Byla zavolana funkce");
+}
+
+</script>                  
+
+<title>SMS App</title>
+    </head>
+        <body>            
+          <h1>Send SMS</h1>
+              <form>
+                    <div>
+                        Phone Number: <input type="text" id="phoneNo" name="phoneNo" value="732814800">
+                    </div>
+                    <div>        
+                        Message: <input type="text" id="textMessage" name="textMessage" value="Ahoj">
+                    </div>                 
+                    <input type="button" id="sendSMS" value="Send" onclick="callFunction();"></a>        
+              </form>                                                                                                           
+    </body>
+</html>

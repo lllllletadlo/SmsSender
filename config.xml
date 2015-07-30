@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--com.insia.insurancecompanies
+-->
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "ro.inited.insia"
+        version   = "0.0.2">
+
+    <name>INSIA</name>
+
+    <description>INSIA Pojišťovny</description>
+
+    <author href="http://inited.cz" email="info@initedsolutions.cz">INITED Solutions s.r.o.</author>
+
+    <!--
+        If you do not want any permissions to be added to your app, add the
+        following tag to your config.xml; you will still have the INTERNET
+        permission on your app, which PhoneGap requires.
+    
+    <preference name="permissions"                value="none"/>
+     -->
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="phonegap-version"           value="3.5.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="orientation"                value="portrait" />       <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="handset" />        <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="false" />          <!-- all: hides the status bar at the top of the screen -->
+    <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+    <preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+    <preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+    <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+    <preference name="AutoHideSplashScreen"       value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="SplashScreenDelay"          value="2000"/>            <!-- android: splash duration -->
+    <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+    <preference name="android-minSdkVersion"      value="7" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+
+	<preference name="DisallowOverscroll" value="true" />
+
+    <!-- Plugins  -->
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+	<gap:plugin name="tr.bel.mamak.sms_plagin" version="0.1.0" />
+
+    <!-- Define app icon for each platform. 
+    <icon src="res/icon/icon128x128.png" />-->
+    <icon src="res/icon/icon36x36.png"   gap:platform="android"    gap:density="ldpi" />
+    <icon src="res/icon/icon48x48.png"   gap:platform="android"    gap:density="mdpi" />
+    <icon src="res/icon/icon72x72.png"   gap:platform="android"    gap:density="hdpi" />
+    <icon src="res/icon/icon96x96.png"   gap:platform="android"    gap:density="xhdpi" />
+    <icon src="res/icon/icon57x57.png"   gap:platform="ios"        width="57" height="57" />
+    <icon src="res/icon/icon72x72.png"   gap:platform="ios"        width="72" height="72" />
+    <icon src="res/icon/icon76x76.png"   gap:platform="ios"        width="76" height="76" />
+    <icon src="res/icon/icon114x114.png" gap:platform="ios"        width="114" height="114" />
+    <icon src="res/icon/icon120x120.png" gap:platform="ios"        width="120" height="120" />
+    <icon src="res/icon/icon144x144.png" gap:platform="ios"        width="144" height="144" />
+    <icon src="res/icon/icon152x152.png" gap:platform="ios"        width="152" height="152" />
+    
+
+    <!-- Define app splash screen for each platform. -->
+    <gap:splash src="res/splash/splash200x320.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/splash/splash320x480.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/splash/splash480x800.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/splash/splash720x1280.png" gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="res/splash/splash640x1136.png"  gap:platform="ios"    width="640" height="1136" />
+    <gap:splash src="res/splash/splash640x960.png"   gap:platform="ios"    width="640" height="960" />
+    <gap:splash src="res/splash/splash320x480.png"   gap:platform="ios"    width="320" height="480" />
+
+    <access origin="*"/> <!-- allow local pages -->
+</widget>
